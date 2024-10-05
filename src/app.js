@@ -7,6 +7,8 @@ const app = express();
 const PORT = 3000;
 
 // Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // Serve static files (like CSS) if needed
 app.use(express.static(path.join(__dirname, process.env.STATIC_BASE)));
 
